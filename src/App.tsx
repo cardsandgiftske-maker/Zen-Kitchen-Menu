@@ -348,7 +348,10 @@ export default function App() {
                     </div>
                     <div className="text-3xl font-bold text-gold">Ksh {offer.price.toLocaleString()}</div>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4 group-hover:text-gold transition-colors">{offer.name}</h3>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4 group-hover:text-gold transition-colors flex items-center gap-3">
+                    {offer.icon && <span>{offer.icon}</span>}
+                    {offer.name}
+                  </h3>
                   <p className="text-white/60 text-lg mb-8 leading-relaxed flex-grow">
                     {offer.description}
                   </p>
@@ -413,7 +416,10 @@ export default function App() {
                       onClick={() => handleOrder(item)}
                     >
                       <div className="flex justify-between items-start mb-4">
-                        <h4 className="text-xl font-semibold group-hover:text-gold transition-colors">{item.name}</h4>
+                        <h4 className="text-xl font-semibold group-hover:text-gold transition-colors flex items-center gap-2">
+                          {item.icon && <span className="text-2xl">{item.icon}</span>}
+                          {item.name}
+                        </h4>
                         <div className="p-2 bg-gold/10 rounded-lg">
                           <ChevronRight className="w-4 h-4 text-gold" />
                         </div>
@@ -459,7 +465,10 @@ export default function App() {
                         onClick={() => handleOrder(item)}
                       >
                         <div className="flex justify-between items-start mb-4">
-                          <h4 className="text-xl font-semibold group-hover:text-gold transition-colors">{item.name}</h4>
+                          <h4 className="text-xl font-semibold group-hover:text-gold transition-colors flex items-center gap-2">
+                            {item.icon && <span className="text-2xl">{item.icon}</span>}
+                            {item.name}
+                          </h4>
                           <div className="p-2 bg-gold/10 rounded-lg">
                             <ChevronRight className="w-4 h-4 text-gold" />
                           </div>

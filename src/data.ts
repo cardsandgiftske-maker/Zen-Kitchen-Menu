@@ -21,6 +21,18 @@ const WING_FLAVORS: CustomizationOption = {
   required: true
 };
 
+const PIZZA_FLAVORS: CustomizationOption = {
+  id: 'pizza-flavor',
+  title: 'Choose Flavor',
+  options: [
+    'BBQ Beef', 'BBQ Chicken', 'Chicken Tikka', 'Periperi Beef', 'Periperi Chicken',
+    'Chicken & Mushroom', 'Vegetable Tikka', 'Nyama Feast', 'Veg Feast',
+    'Chicken Feast', 'Chicken & Beef Pepperoni', 'Meat Deluxe', 'Chicken Bacon',
+    'Chicken Hawaiian', 'Beef Hawaiian'
+  ],
+  required: true
+};
+
 export const MENU_DATA: MenuCategory[] = [
   {
     id: 'offers',
@@ -85,7 +97,8 @@ export const MENU_DATA: MenuCategory[] = [
           'Medium': 950,
           'Large': 1200,
           'Mega': 1350
-        }
+        },
+        customizations: [PIZZA_FLAVORS]
       },
       {
         id: 'supreme-pizza',
@@ -95,7 +108,8 @@ export const MENU_DATA: MenuCategory[] = [
           'Medium': 1090,
           'Large': 1390,
           'Mega': 1750
-        }
+        },
+        customizations: [PIZZA_FLAVORS]
       },
       {
         id: 'extra-toppings',

@@ -8,6 +8,7 @@ export interface CustomizationOption {
 export interface MenuItem {
   id: string;
   name: string;
+  icon?: string;
   description?: string;
   price: number | Record<string, number>;
   tags?: string[];
